@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ВАЙБС — школа танцев в Перми | Седова 22</title>
+  <meta name="description" content="Школа танцев ВАЙБС в Перми: high heels, хип-хоп, джаз-фанк, тектоник, детские группы. Запись на занятие в Telegram и по телефону.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ВАЙБС — школа танцев | Пермь">
+  <meta property="og:description" content="Тот самый вайб: современные направления, уютный зал на Седова 22 и запись в удобное время.">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23111114'/%3E%3Ccircle cx='22' cy='28' r='8' fill='%23FF4D8D'/%3E%3Ccircle cx='40' cy='36' r='10' fill='%237CFFB2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #141418;
+      --muted: #5f6068;
+      --bg: #f6f3ef;
+      --white: #fffdf9;
+      --pink: #ff4d8d;
+      --pink-deep: #e2266d;
+      --mint: #7cffb2;
+      --mint-deep: #1f9d63;
+      --line: rgba(20, 20, 24, 0.12);
+      --shadow: 0 20px 50px rgba(20, 20, 24, 0.12);
+      --radius: 24px;
+      --container: 1120px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 500px at 0% 0%, rgba(255, 77, 141, 0.16), transparent 55%),
+        radial-gradient(800px 480px at 100% 10%, rgba(124, 255, 178, 0.18), transparent 50%),
+        linear-gradient(180deg, #faf7f2 0%, var(--bg) 45%, #efeae3 100%);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+
+    .container { width: min(100% - 2rem, var(--container)); margin-inline: auto; }
+
+    .demo-banner {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--ink); color: #f3f3f5;
+      text-align: center; font-size: 0.82rem; font-weight: 700;
+      padding: 0.55rem 1rem;
+    }
+    .demo-banner span { color: var(--mint); }
+
+    .site-header {
+      position: sticky; top: 34px; z-index: 900;
+      backdrop-filter: blur(14px);
+      background: rgba(246, 243, 239, 0.82);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .site-header.is-scrolled {
+      border-bottom-color: var(--line);
+      box-shadow: 0 10px 30px rgba(20,20,24,.06);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+
+    .logo {
+      display: inline-flex; align-items: center; gap: .7rem;
+      font-family: "Unbounded", sans-serif;
+      font-weight: 800; letter-spacing: -.03em; font-size: 1.05rem;
+    }
+    .logo-mark {
+      width: 42px; height: 42px; border-radius: 14px;
+      background: var(--ink); display: grid; place-items: center;
+      box-shadow: 0 10px 24px rgba(20,20,24,.2);
+    }
+    .logo-mark span {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), var(--mint));
+      display: block;
+    }
+
+    .nav { display: none; align-items: center; gap: 1.25rem; }
+    .nav a { color: var(--muted); font-weight: 700; font-size: .94rem; }
+    .nav a:hover, .nav a:focus-visible { color: var(--ink); outline: none; }
+
+    .header-actions { display: flex; align-items: center; gap: .6rem; }
+    .menu-toggle {
+      width: 44px; height: 44px; border-radius: 12px;
+      border: 1px solid var(--line); background: var(--white);
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+
+    .btn, .menu-toggle, .chip, summary, a, input, select, textarea {
+      transition: transform .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease), color .25s var(--ease);
+    }
+    .btn:focus-visible, .menu-toggle:focus-visible, .chip:focus-visible,
+    summary:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(255, 77, 141, .4); outline-offset: 2px;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+      min-height: 48px; padding: .8rem 1.2rem; border-radius: 999px;
+      border: 1px solid transparent; font-weight: 800; cursor: pointer; text-align: center;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+      color: #fff; box-shadow: 0 14px 30px rgba(255, 77, 141, .28);
+    }
+    .btn-secondary {
+      background: rgba(255,253,249,.9);
+      border-color: var(--line); color: var(--ink);
+    }
+    .btn-secondary:hover { border-color: var(--ink); }
+    .btn-dark { background: var(--ink); color: #fff; }
+    .btn-tg { background: #2aabee; color: #fff; box-shadow: 0 12px 28px rgba(42,171,238,.25); }
+    .btn-compact { min-height: 42px; padding: .65rem 1rem; font-size: .92rem; }
+    .btn-full { width: 100%; }
+    .btn-ghost {
+      background: transparent; border-color: rgba(255,255,255,.3); color: #fff;
+    }
+
+    .mobile-nav {
+      display: none; border-top: 1px solid var(--line);
+      background: rgba(246,243,239,.98); padding: .8rem 0 1.2rem;
+    }
+    .mobile-nav.is-open { display: block; }
+    .mobile-nav nav { display: grid; gap: .2rem; }
+    .mobile-nav a {
+      padding: .85rem 0; font-weight: 800; border-bottom: 1px solid var(--line);
+    }
+    .mobile-nav .btn { margin-top: .8rem; }
+
+    .hero { padding: 1.4rem 0 3.4rem; }
+    .hero-grid { display: grid; gap: 1.6rem; align-items: end; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .4rem .85rem; border-radius: 999px;
+      background: rgba(20,20,24,.06); font-size: .84rem; font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .eyebrow i {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--pink);
+      box-shadow: 0 0 0 4px rgba(255,77,141,.18); display: block;
+    }
+
+    h1, h2, h3 {
+      font-family: "Unbounded", sans-serif;
+      letter-spacing: -.04em; line-height: 1.08; margin: 0 0 .75rem; color: var(--ink);
+    }
+    h1 { font-size: clamp(2.4rem, 8vw, 4.6rem); max-width: 11ch; }
+    h2 { font-size: clamp(1.7rem, 4.4vw, 2.6rem); }
+    h3 { font-size: 1.15rem; margin-bottom: .4rem; }
+
+    .lead { color: var(--muted); font-size: 1.06rem; max-width: 38ch; margin: 0 0 1.3rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1.3rem; }
+
+    .rating-pill {
+      display: inline-flex; flex-wrap: wrap; align-items: center; gap: .7rem 1rem;
+      padding: .85rem 1rem; border-radius: 18px;
+      background: rgba(255,253,249,.85); border: 1px solid var(--line);
+    }
+    .rating-score { font-family: "Unbounded", sans-serif; font-size: 1.45rem; font-weight: 800; }
+    .stars { color: #e0a14a; letter-spacing: .08em; }
+    .rating-text { color: var(--muted); font-size: .92rem; }
+
+    .hero-visual {
+      position: relative; min-height: 320px; border-radius: 30px; overflow: hidden;
+      box-shadow: var(--shadow); isolation: isolate;
+    }
+    .hero-visual img {
+      width: 100%; height: 100%; min-height: 320px; object-fit: cover;
+      transform: scale(1.04); animation: drift 16s var(--ease) infinite alternate;
+    }
+    .hero-visual::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(20,20,24,.05), rgba(20,20,24,.55));
+    }
+    .hero-caption {
+      position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2;
+      color: #fff; font-weight: 700; text-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .float-chip {
+      position: absolute; top: 1rem; left: 1rem; z-index: 2;
+      background: rgba(20,20,24,.78); color: #fff;
+      padding: .45rem .8rem; border-radius: 999px; font-size: .8rem; font-weight: 800;
+    }
+
+    .section { padding: 4rem 0; }
+    .section-head { display: grid; gap: .65rem; margin-bottom: 2rem; max-width: 40rem; }
+    .section-kicker {
+      font-size: .78rem; font-weight: 800; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--pink-deep);
+    }
+    .section-head p { margin: 0; color: var(--muted); font-size: 1.04rem; }
+
+    .grid-3, .grid-2, .gallery-grid, .faq-grid { display: grid; gap: 1rem; }
+
+    .card {
+      background: rgba(255,253,249,.82); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.25rem;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+    }
+    .card:hover {
+      transform: translateY(-4px); box-shadow: var(--shadow);
+      border-color: rgba(255,77,141,.35);
+    }
+    .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .tag {
+      display: inline-flex; padding: .28rem .65rem; border-radius: 999px;
+      background: rgba(20,20,24,.06); color: var(--ink); font-size: .78rem; font-weight: 800;
+    }
+    .tag.soft { background: rgba(255,77,141,.12); color: var(--pink-deep); }
+    .tag.mint { background: rgba(124,255,178,.28); color: #147a4a; }
+
+    .chooser { display: grid; gap: 1rem; }
+    .chooser-panel {
+      background: var(--ink); color: #ececf0; border-radius: 28px;
+      padding: 1.5rem; position: relative; overflow: hidden;
+    }
+    .chooser-panel::before {
+      content: ""; position: absolute; width: 240px; height: 240px; right: -70px; top: -80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,77,141,.35), transparent 70%);
+    }
+    .chooser-panel h2, .chooser-panel h3 { color: #fff; position: relative; z-index: 1; }
+    .chooser-panel p { color: rgba(236,236,240,.78); margin: 0 0 1rem; position: relative; z-index: 1; }
+    .chip-group { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1rem; position: relative; z-index: 1; }
+    .chip {
+      border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06);
+      color: #fff; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; font-weight: 800;
+    }
+    .chip.is-active, .chip:hover { background: var(--pink); border-color: transparent; }
+    .chooser-result {
+      position: relative; z-index: 1;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px; padding: 1rem 1.1rem; min-height: 96px;
+    }
+    .chooser-result strong { display: block; margin-bottom: .35rem; color: #fff; font-size: 1.05rem; }
+
+    .avatar {
+      width: 64px; height: 64px; border-radius: 20px; display: grid; place-items: center;
+      font-family: "Unbounded", sans-serif; font-weight: 800; color: #fff;
+      background: linear-gradient(145deg, var(--pink), #241018);
+    }
+
+    .note {
+      padding: 1rem 1.1rem; border-radius: 16px;
+      background: rgba(255,77,141,.08); border: 1px solid rgba(255,77,141,.18);
+      color: var(--ink); font-size: .95rem;
+    }
+
+    .schedule-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .schedule-table {
+      width: 100%; min-width: 560px; border-collapse: collapse;
+      background: rgba(255,253,249,.85); border-radius: 18px; overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .schedule-table th, .schedule-table td {
+      padding: .9rem 1rem; text-align: left; border-bottom: 1px solid var(--line);
+      vertical-align: top; font-size: .94rem;
+    }
+    .schedule-table th { background: var(--ink); color: #fff; }
+    .schedule-table tr:last-child td { border-bottom: 0; }
+    .schedule-table td:first-child { font-weight: 800; }
+
+    .price {
+      font-family: "Unbounded", sans-serif; font-size: 1.7rem; font-weight: 800;
+      margin: .4rem 0; color: var(--ink);
+    }
+    .price span { font-family: "Manrope", sans-serif; font-size: .95rem; font-weight: 700; color: var(--muted); }
+
+    .gallery-item {
+      position: relative; border-radius: 22px; overflow: hidden; min-height: 220px;
+      box-shadow: var(--shadow);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; min-height: 220px; object-fit: cover;
+      transition: transform .6s var(--ease);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-label {
+      position: absolute; left: .8rem; bottom: .8rem;
+      padding: .35rem .7rem; border-radius: 999px;
+      background: rgba(20,20,24,.75); color: #fff; font-size: .78rem; font-weight: 800;
+    }
+
+    .review-card blockquote { margin: 0 0 1rem; color: var(--ink); }
+    .review-meta {
+      display: flex; flex-wrap: wrap; gap: .4rem .8rem; align-items: center;
+      color: var(--muted); font-size: .9rem;
+    }
+    .review-meta strong { color: var(--ink); }
+
+    .faq details {
+      background: rgba(255,253,249,.82); border: 1px solid var(--line);
+      border-radius: 18px; padding: .2rem 1rem;
+    }
+    .faq details[open] { border-color: rgba(255,77,141,.4); }
+    .faq summary {
+      cursor: pointer; list-style: none; font-weight: 800; padding: 1rem 0;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; float: right; color: var(--pink); font-size: 1.2rem; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { margin: 0 0 1rem; color: var(--muted); }
+
+    .cta-final { padding: 0 0 4rem; }
+    .cta-panel {
+      display: grid; gap: 1.5rem; border-radius: 30px; padding: 1.6rem;
+      background:
+        radial-gradient(500px 280px at 100% 0%, rgba(255,77,141,.35), transparent 60%),
+        linear-gradient(145deg, #17171c, #2a1520);
+      color: #fff; box-shadow: var(--shadow);
+    }
+    .cta-panel h2 { color: #fff; }
+    .cta-panel .lead { color: rgba(255,255,255,.78); }
+
+    .form {
+      display: grid; gap: .85rem;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 22px; padding: 1.1rem;
+    }
+    .form label { display: grid; gap: .35rem; font-size: .9rem; font-weight: 700; }
+    .form input, .form select, .form textarea {
+      width: 100%; border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.1); color: #fff; border-radius: 14px;
+      padding: .85rem .95rem;
+    }
+    .form input::placeholder, .form textarea::placeholder { color: rgba(255,255,255,.55); }
+    .form select option { color: var(--ink); }
+    .form-error { color: #ffc3d8; font-size: .88rem; min-height: 1.2em; margin: 0; }
+    .form-success {
+      display: none; padding: .9rem 1rem; border-radius: 14px;
+      background: rgba(124,255,178,.14); border: 1px solid rgba(124,255,178,.35);
+      color: #eafff2; font-size: .92rem;
+    }
+    .form-success.is-visible { display: block; }
+    .form-hint { font-size: .85rem; color: rgba(255,255,255,.7); margin: 0; }
+
+    .contact-list { display: grid; gap: .75rem; }
+    .contact-item {
+      display: flex; gap: .75rem; align-items: flex-start;
+      padding: .85rem .95rem; border-radius: 16px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
+    }
+    .contact-item svg { width: 22px; height: 22px; flex: 0 0 auto; margin-top: 2px; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    .site-footer {
+      padding: 2.5rem 0 3rem; border-top: 1px solid var(--line);
+      background: rgba(255,253,249,.55);
+    }
+    .footer-grid { display: grid; gap: 1.5rem; }
+    .footer-grid p { margin: .35rem 0; color: var(--muted); font-size: .95rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .7rem 1.1rem; }
+    .footer-links a { font-weight: 800; }
+    .footer-links a:hover { color: var(--pink-deep); }
+
+    .reveal {
+      opacity: 0; transform: translateY(22px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    .skip-link {
+      position: absolute; left: -999px; top: 0; background: var(--pink); color: #fff;
+      padding: .7rem 1rem; z-index: 2000; font-weight: 800;
+    }
+    .skip-link:focus { left: 0; }
+
+    @keyframes drift {
+      from { transform: scale(1.02) translateY(0); }
+      to { transform: scale(1.08) translateY(-2%); }
+    }
+
+    @media (min-width: 640px) {
+      .grid-3, .grid-2, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .nav { display: flex; }
+      .menu-toggle { display: none; }
+      .btn-header-desktop { display: inline-flex !important; }
+      .hero-grid { grid-template-columns: 1.05fr .95fr; gap: 2.4rem; align-items: center; }
+      .hero-visual, .hero-visual img { min-height: 520px; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .chooser { grid-template-columns: 1.15fr .85fr; }
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+      .cta-panel { grid-template-columns: 1fr 1fr; padding: 2.2rem; }
+      .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+      .schedule-wrap { overflow: visible; }
+      .schedule-table { min-width: 0; }
+    }
+    @media (max-width: 899px) {
+      .btn-header-desktop { display: none !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Демо-концепт лендинга для школы танцев ВАЙБС (Пермь). Не является официальным сайтом. -->
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="demo-banner" role="note">
+    Демонстрационная концепция. <span>Не является официальным сайтом школы</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="ВАЙБС — наверх">
+        <span class="logo-mark" aria-hidden="true"><span></span></span>
+        <span>ВАЙБС</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#directions">Направления</a>
+        <a href="#howto">Как выбрать</a>
+        <a href="#schedule">Расписание</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-compact btn-header-desktop" href="#booking">Записаться</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="container">
+        <nav aria-label="Мобильная навигация">
+          <a href="#directions">Направления</a>
+          <a href="#howto">Как выбрать</a>
+          <a href="#teachers">Педагоги</a>
+          <a href="#schedule">Расписание</a>
+          <a href="#prices">Цены</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacts">Контакты</a>
+          <a class="btn btn-primary btn-full" href="#booking">Записаться на занятие</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><i aria-hidden="true"></i> Школа танцев · Пермь · Седова 22</div>
+          <h1>ВАЙБС — тот самый вайб для танцев</h1>
+          <p class="lead">
+            High heels, хип-хоп, джаз-фанк, тектоник и другие современные направления.
+            Можно прийти с нуля — подберём группу и комфортный старт.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking">Записаться на занятие</a>
+            <a class="btn btn-secondary" href="#directions">Смотреть направления</a>
+          </div>
+          <div class="rating-pill">
+            <div>
+              <div class="rating-score">4.9</div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+            </div>
+            <div class="rating-text">
+              в 2ГИС · 38 оценок<br>
+              <a href="https://2gis.ru/perm/firm/70000001040911939" target="_blank" rel="noopener noreferrer">Смотреть отзывы</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMAGE PLACEHOLDER: заменить на фото зала/занятий ВАЙБС. Источник-заглушка: Unsplash. Проверить права перед публикацией. -->
+        <div class="hero-visual reveal">
+          <div class="float-chip">Седова 22 · 3 этаж</div>
+          <img
+            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80"
+            alt="Танцевальное движение под музыку — атмосфера современной школы танцев"
+            width="1400" height="900" fetchpriority="high">
+          <div class="hero-caption">Атмосфера, энергия и своё комьюнити</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="directions" aria-labelledby="directions-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Направления</div>
+          <h2 id="directions-title">Чему учат в ВАЙБС</h2>
+          <p>Современные стили для взрослых и детские группы. Можно выбрать направление, время и педагога — и присоединиться, когда в группе есть место.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3>High Heels</h3>
+            <p>Женский стиль на каблуках: подача, пластика и уверенность в движении. Есть спецкурс для старта с нуля.</p>
+            <div class="tag-row">
+              <span class="tag soft">Взрослые</span>
+              <span class="tag mint">Можно с нуля</span>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Хип-хоп / герли хип-хоп</h3>
+            <p>Энергия, ритм и свобода движения. Подходит, если хочется танцевать ярко и в своём темпе.</p>
+            <div class="tag-row">
+              <span class="tag soft">Улица / современка</span>
+              <span class="tag">Взрослые</span>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Джаз-фанк</h3>
+            <p>Динамичная хореография, характер и сцена. Хороший выбор, если нравится танцевать «в подаче».</p>
+            <div class="tag-row">
+              <span class="tag soft">Взрослые</span>
+              <span class="tag">Хореография</span>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Тектоник</h3>
+            <p>Быстрые руки и ноги под электронную музыку. На занятиях разбирают базу — приходить можно с любым уровнем.</p>
+            <div class="tag-row">
+              <span class="tag soft">Вт / чт 19:00</span>
+              <span class="tag">Для всех</span>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Frame Up / TikTok</h3>
+            <p>Frame Up — чёткие изоляции и эффектная подача. TikTok-группа — вирусные связки и съёмка под тренды.</p>
+            <div class="tag-row">
+              <span class="tag soft">Новые форматы</span>
+              <span class="tag">Вечер</span>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Детские группы</h3>
+            <p>Танцы для детей в тёплой атмосфере. Родители отмечают, что детям нравится ходить снова и снова.</p>
+            <div class="tag-row">
+              <span class="tag soft">Дети</span>
+              <span class="tag">Подберём группу</span>
+            </div>
+          </article>
+        </div>
+        <p class="note" style="margin-top:1.2rem">Также в школе бывают пилатес, растяжка и другие форматы — актуальный список направлений лучше уточнить при записи.</p>
+      </div>
+    </section>
+
+    <section class="section" id="howto" aria-labelledby="howto-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Подбор</div>
+          <h2 id="howto-title">Как выбрать занятие</h2>
+          <p>Пара кликов — и станет понятнее, с чего начать. Если сомневаетесь, просто напишите в Telegram: подскажем группу.</p>
+        </div>
+
+        <div class="chooser reveal">
+          <div class="chooser-panel">
+            <h3>1. Для кого?</h3>
+            <div class="chip-group" role="group" aria-label="Возраст">
+              <button class="chip is-active" type="button" data-filter="age" data-value="adult">Взрослому</button>
+              <button class="chip" type="button" data-filter="age" data-value="kids">Ребёнку</button>
+            </div>
+            <h3>2. Какой вайб нужен?</h3>
+            <div class="chip-group" role="group" aria-label="Цель">
+              <button class="chip is-active" type="button" data-filter="goal" data-value="heels">Женственный стиль</button>
+              <button class="chip" type="button" data-filter="goal" data-value="street">Энергия и street</button>
+              <button class="chip" type="button" data-filter="goal" data-value="soft">Мягче и спокойнее</button>
+            </div>
+            <h3>3. Опыт</h3>
+            <div class="chip-group" role="group" aria-label="Уровень">
+              <button class="chip is-active" type="button" data-filter="level" data-value="zero">С нуля</button>
+              <button class="chip" type="button" data-filter="level" data-value="some">Уже пробовал(а)</button>
+            </div>
+            <div class="chooser-result" id="chooser-result" aria-live="polite">
+              <strong>High Heels с нуля</strong>
+              Комфортный старт — спецкурс или группа для начинающих. Напишите нам, подберём время.
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>Когда можно присоединиться?</h3>
+              <p>В школе нет жёстких дат набора. Можно влиться, когда начинается новый материал и есть свободное место в группе.</p>
+              <div class="tag-row">
+                <a class="btn btn-secondary btn-compact" href="https://t.me/vibesmnd" target="_blank" rel="noopener noreferrer">Спросить в Telegram</a>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Где мы находимся</h3>
+              <p>Пермь, ул. Седова, 22, 3 этаж. Рядом остановки Белинского и Смирнова. Удобно добираться из центра и Свердловского района.</p>
+              <div class="tag-row">
+                <a class="btn btn-secondary btn-compact" href="https://2gis.ru/perm/firm/70000001040911939" target="_blank" rel="noopener noreferrer">Открыть на карте</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teachers" aria-labelledby="teachers-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Команда</div>
+          <h2 id="teachers-title">С кем вы будете заниматься</h2>
+          <p>Педагогов отмечают за понятные объяснения, поддержку и живую энергию. Ниже — имена, которые чаще всего звучат у учеников.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card reveal" style="display:grid;gap:.8rem">
+            <div class="avatar" aria-hidden="true">АБ</div>
+            <div>
+              <h3>Александра Борисенко</h3>
+              <p>Педагог, к которому часто ходят на разные направления. Ученики отмечают уникальные хореографии, энергию и внимательный подход.</p>
+              <div class="tag-row"><span class="tag soft">Хореография</span><span class="tag">Энергия</span></div>
+            </div>
+          </article>
+          <article class="card reveal" style="display:grid;gap:.8rem">
+            <div class="avatar" aria-hidden="true" style="background:linear-gradient(145deg,#7cffb2,#141418)">ЮА</div>
+            <div>
+              <h3>Юля Авома</h3>
+              <p>Объясняет просто, даёт полезные поправки и мотивирует. Хороший вариант, если хотите прогрессировать без давления.</p>
+              <div class="tag-row"><span class="tag soft">Поддержка</span><span class="tag">Техника</span></div>
+            </div>
+          </article>
+          <article class="card reveal" style="display:grid;gap:.8rem">
+            <div class="avatar" aria-hidden="true" style="background:linear-gradient(145deg,#ff4d8d,#7cffb2)">АР</div>
+            <div>
+              <h3>Арина</h3>
+              <p>Ведёт детские группы. Родители пишут, что ребёнку нравится — и это главный критерий.</p>
+              <div class="tag-row"><span class="tag soft">Детские группы</span></div>
+            </div>
+          </article>
+          <article class="card reveal" style="display:grid;gap:.8rem">
+            <div class="avatar" aria-hidden="true" style="background:linear-gradient(145deg,#241018,#ff4d8d)">+</div>
+            <div>
+              <h3>Ещё педагоги школы</h3>
+              <p>В расписании также встречаются Настя (пилатес и растяжка), Ксюша (тектоник), Ева (Frame Up), Софа (TikTok). Подскажем, кто ведёт нужную группу.</p>
+              <div class="tag-row"><span class="tag soft">Разные стили</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule" aria-labelledby="schedule-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Расписание</div>
+          <h2 id="schedule-title">Несколько актуальных слотов</h2>
+          <p>Полное расписание школа публикует в соцсетях. Ниже — примеры групп, которые уже анонсировали. Перед визитом лучше подтвердить время.</p>
+        </div>
+
+        <div class="reveal">
+          <p class="note" style="margin-bottom:1rem">Работаем по расписанию занятий: пн–пт примерно 10:00–23:00, сб–вс 10:00–22:00.</p>
+          <div class="schedule-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Направление</th>
+                  <th>Дни и время</th>
+                  <th>Педагог</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Тектоник</td>
+                  <td>Вт, чт · 19:00</td>
+                  <td>Ксюша</td>
+                </tr>
+                <tr>
+                  <td>Frame Up</td>
+                  <td>Пн, ср · 21:00</td>
+                  <td>Ева</td>
+                </tr>
+                <tr>
+                  <td>TikTok</td>
+                  <td>Пт · 18:00</td>
+                  <td>Софа</td>
+                </tr>
+                <tr>
+                  <td>Пилатес</td>
+                  <td>Пн, ср · 12:00</td>
+                  <td>Настя</td>
+                </tr>
+                <tr>
+                  <td>Растяжка</td>
+                  <td>Пн, ср · 18:00</td>
+                  <td>Настя</td>
+                </tr>
+                <tr>
+                  <td>High Heels / хип-хоп / джаз-фанк</td>
+                  <td>Несколько групп в неделю</td>
+                  <td>Подберём при записи</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="hero-actions" style="margin-top:1.2rem">
+            <a class="btn btn-tg" href="https://t.me/vibesmnd" target="_blank" rel="noopener noreferrer">Запросить расписание в Telegram</a>
+            <a class="btn btn-secondary" href="https://vk.com/vbsdanceperm" target="_blank" rel="noopener noreferrer">Смотреть в VK</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices" aria-labelledby="prices-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Цены</div>
+          <h2 id="prices-title">Как устроена стоимость</h2>
+          <p>Актуальный прайс школа закрепляет в VK. Ниже — ориентиры, а точный пакет под ваше направление подскажем в переписке.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3>Абонемент</h3>
+            <p class="price">от 3 850 ₽ <span>/ месяц</span></p>
+            <p>Стоимость зависит от направления и количества занятий. Напишите — подберём подходящий вариант.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Разовые и старт</h3>
+            <p class="price">по запросу</p>
+            <p>Можно прийти на первое занятие и понять атмосферу. Условия старта уточним при записи.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Аренда зала</h3>
+            <p class="price">от 350 ₽</p>
+            <p>Если нужен зал под репетицию или съёмку — спросите наличие у администратора.</p>
+          </article>
+        </div>
+
+        <div class="hero-actions" style="margin-top:1.3rem">
+          <a class="btn btn-primary" href="#booking">Узнать стоимость</a>
+          <a class="btn btn-tg" href="https://t.me/vibesmnd?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%86%D0%B5%D0%BD%D1%8B%20%D0%B0%D0%B1%D0%BE%D0%BD%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%20%D0%92%D0%90%D0%99%D0%91%D0%A1." target="_blank" rel="noopener noreferrer">Спросить в Telegram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Атмосфера</div>
+          <h2 id="gallery-title">Какое настроение в зале</h2>
+          <p>Современный зал, раздевалка с шкафчиками и душевой, своя энергия на занятиях. Фото ниже — тематические, их лучше заменить кадрами школы.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- IMAGE PLACEHOLDER / Unsplash: заменить на фото ВАЙБС -->
+          <figure class="gallery-item reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=900&q=80" alt="Танцевальная практика в зале" width="900" height="700">
+            <figcaption class="gallery-label">Движение</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=900&q=80" alt="Группа на танцевальном занятии" width="900" height="700">
+            <figcaption class="gallery-label">Группа</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=900&q=80" alt="Энергия современного танца" width="900" height="700">
+            <figcaption class="gallery-label">Энергия</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Тренировка в светлом зале" width="900" height="700">
+            <figcaption class="gallery-label">Зал</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">Отзывы</div>
+          <h2 id="reviews-title">Что говорят ученики</h2>
+          <p>Коротко из отзывов в 2ГИС: тепло, понятные объяснения и желание возвращаться.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card review-card reveal">
+            <blockquote>«Хожу в Vibes более 6 месяцев — очень нравится. Атмосфера тёплая, музыка классная, расписание удобное. Мой тренер Юля Авома объясняет всё просто, даёт полезные поправки и мотивирует.»</blockquote>
+            <div class="review-meta"><strong>Екатерина Иванова</strong><span>2ГИС</span></div>
+          </article>
+          <article class="card review-card reveal">
+            <blockquote>«Очень люблю танцевальную школу Vibe’s. Уже чувствую себя в зале как дома. Удобное местонахождение, есть раздевалка с шкафчиками, душевой… Занимаюсь с Александрой, всем довольна.»</blockquote>
+            <div class="review-meta"><strong>Ульяна Кизилина</strong><span>2ГИС</span></div>
+          </article>
+          <article class="card review-card reveal">
+            <blockquote>«Мы переживали, что раньше никогда не занимались танцами и будет некомфортно. В итоге остались в полном восторге. Зал красивый и современный, персонал дружелюбный.»</blockquote>
+            <div class="review-meta"><strong>Юлия Петрова</strong><span>2ГИС</span></div>
+          </article>
+          <article class="card review-card reveal">
+            <blockquote>«Саша — идеальный тренер. Всегда внимательная ко всем ученикам. Сделает кошечками даже тех, кто никогда в жизни не танцевал.»</blockquote>
+            <div class="review-meta"><strong>Настя Хохлач</strong><span>2ГИС</span></div>
+          </article>
+        </div>
+
+        <p style="margin-top:1.2rem">
+          <a class="btn btn-secondary" href="https://2gis.ru/perm/firm/70000001040911939/tab/reviews" target="_blank" rel="noopener noreferrer">Все отзывы в 2ГИС</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">FAQ</div>
+          <h2 id="faq-title">Частые вопросы</h2>
+          <p>Собрали ответы на то, о чём обычно спрашивают перед первым занятием.</p>
+        </div>
+
+        <div class="faq-grid reveal">
+          <details>
+            <summary>Можно ли прийти с нуля?</summary>
+            <p>Да. Есть группы и спецкурс для начинающих, например по high heels. Педагоги объясняют движения простым языком — без давления «сразу всё идеально».</p>
+          </details>
+          <details>
+            <summary>Как записаться на первое занятие?</summary>
+            <p>Напишите в Telegram службе заботы или в директ VK. Менеджер подскажет группу, время и организует старт. Также можно позвонить по телефону.</p>
+          </details>
+          <details>
+            <summary>Нужно ли ждать набор?</summary>
+            <p>Жёстких дат набора нет. Можно присоединиться, когда начинается новый материал и в группе есть место.</p>
+          </details>
+          <details>
+            <summary>Что взять с собой?</summary>
+            <p>Удобную одежду для движения и сменную обувь. Для high heels — каблуки, если они уже есть; если нет, уточните у администратора, с чего лучше начать.</p>
+          </details>
+          <details>
+            <summary>Есть ли детские группы?</summary>
+            <p>Да, есть детские направления. Напишите возраст ребёнка — подберём подходящую группу.</p>
+          </details>
+          <details>
+            <summary>Как оплатить?</summary>
+            <p>Можно картой, наличными или по QR-коду. Актуальный пакет и способ оплаты подскажут при записи.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" id="booking" aria-labelledby="booking-title">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div>
+            <div class="section-kicker" style="color:var(--mint)">Запись</div>
+            <h2 id="booking-title">Запишитесь в ВАЙБС</h2>
+            <p class="lead">Оставьте контакты — откроется Telegram с готовым сообщением. Останется только отправить его службе заботы.</p>
+
+            <div class="contact-list" id="contacts">
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 5L12 12 3 5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/></svg>
+                <div>
+                  <strong>Telegram</strong><br>
+                  <a href="https://t.me/vibesmnd" target="_blank" rel="noopener noreferrer">@vibesmnd — служба заботы</a><br>
+                  <a href="https://t.me/vibes_dance_perm" target="_blank" rel="noopener noreferrer">@vibes_dance_perm — канал школы</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.8c.5-.5 1.4-.5 1.9 0l1.8 1.8c.5.5.5 1.3.1 1.8l-1.1 1.3a14.5 14.5 0 0 0 6 6l1.3-1.1c.5-.4 1.3-.4 1.8.1l1.8 1.8c.5.5.5 1.4 0 1.9l-1.2 1.2c-.5.5-1.3.7-2 .5C10.4 18 6 13.6 4.9 7.9c-.2-.7 0-1.5.5-2l1.2-1.1Z" stroke="currentColor" stroke-width="1.6"/></svg>
+                <div>
+                  <strong>Телефон / WhatsApp</strong><br>
+                  <a href="tel:+79124870170">+7 (912) 487-01-70</a><br>
+                  <a href="https://wa.me/79124870170" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                <div>
+                  <strong>Адрес</strong><br>
+                  Пермь, ул. Седова, 22, 3 этаж<br>
+                  <a href="https://vk.com/vbsdanceperm" target="_blank" rel="noopener noreferrer">VK: vbsdanceperm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="form" id="booking-form" novalidate>
+            <label>
+              Имя
+              <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться">
+            </label>
+            <label>
+              Телефон
+              <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
+            </label>
+            <label>
+              Направление
+              <select name="direction" required>
+                <option value="">Выберите направление</option>
+                <option>High Heels</option>
+                <option>Хип-хоп / герли хип-хоп</option>
+                <option>Джаз-фанк</option>
+                <option>Тектоник</option>
+                <option>Frame Up</option>
+                <option>TikTok</option>
+                <option>Детские танцы</option>
+                <option>Пилатес / растяжка</option>
+                <option>Пока не знаю — нужна консультация</option>
+              </select>
+            </label>
+            <label>
+              Комментарий
+              <textarea name="comment" rows="3" placeholder="Возраст, удобные дни, вопрос по старту с нуля"></textarea>
+            </label>
+            <p class="form-error" id="form-error" role="alert"></p>
+            <p class="form-success" id="form-success">Готово! Сейчас откроется Telegram — просто отправьте сообщение, и мы ответим.</p>
+            <button class="btn btn-tg btn-full" type="submit">Написать в Telegram</button>
+            <a class="btn btn-ghost btn-full" href="tel:+79124870170">Или позвонить</a>
+            <p class="form-hint">Быстрее всего ответит служба заботы в Telegram: @vibesmnd</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:.6rem">
+          <span class="logo-mark" aria-hidden="true"><span></span></span>
+          <span>ВАЙБС</span>
+        </div>
+        <p>Школа танцев в Перми — современный зал, живые группы и своё комьюнити.</p>
+        <p><strong>Демо-концепт сайта. Не является официальной страницей школы.</strong></p>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <p><a href="tel:+79124870170">+7 (912) 487-01-70</a></p>
+        <p><a href="https://t.me/vibesmnd" target="_blank" rel="noopener noreferrer">Telegram @vibesmnd</a></p>
+        <p>Пермь, Седова 22, 3 этаж</p>
+      </div>
+      <div>
+        <h3>Соцсети</h3>
+        <div class="footer-links">
+          <a href="https://vk.com/vbsdanceperm" target="_blank" rel="noopener noreferrer">VK</a>
+          <a href="https://t.me/vibes_dance_perm" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://instagram.com/vibes.dance.perm" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://2gis.ru/perm/firm/70000001040911939" target="_blank" rel="noopener noreferrer">2ГИС</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const header = document.querySelector(".site-header");
+      const toggle = document.querySelector(".menu-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+      const form = document.getElementById("booking-form");
+      const formError = document.getElementById("form-error");
+      const formSuccess = document.getElementById("form-success");
+      const filters = { age: "adult", goal: "heels", level: "zero" };
+
+      const recommendations = {
+        "adult|heels|zero": {
+          title: "High Heels с нуля",
+          text: "Комфортный старт — спецкурс или группа для начинающих. Напишите нам, подберём время."
+        },
+        "adult|heels|some": {
+          title: "High Heels",
+          text: "Можно сразу смотреть группу под ваш уровень. Подскажем педагога и удобный слот."
+        },
+        "adult|street|zero": {
+          title: "Хип-хоп, тектоник или TikTok",
+          text: "Если хочется энергии с нуля — начните с тектоника или TikTok-группы. Объясняют базу понятно."
+        },
+        "adult|street|some": {
+          title: "Хип-хоп / джаз-фанк / Frame Up",
+          text: "Для тех, кто уже двигался, отлично заходят хип-хоп, джаз-фанк и Frame Up. Подберём группу под подачу."
+        },
+        "adult|soft|zero": {
+          title: "Пилатес или растяжка",
+          text: "Мягкий вход — пилатес и растяжка днём/вечером. Потом можно добавить танцевальное направление."
+        },
+        "adult|soft|some": {
+          title: "Растяжка + лёгкий танец",
+          text: "Сочетайте растяжку с направлением, которое нравится по настроению. Поможем собрать удобный график."
+        },
+        "kids|heels|zero": {
+          title: "Детская группа",
+          text: "Для ребёнка лучше детское направление, а не взрослый heels. Напишите возраст — подберём группу."
+        },
+        "kids|heels|some": {
+          title: "Детские танцы",
+          text: "Если ребёнок уже занимался — всё равно начнём с детской группы под возраст и уровень."
+        },
+        "kids|street|zero": {
+          title: "Детские танцы / хип-хоп",
+          text: "Энергичный старт для ребёнка — детские группы. Скажите возраст, подберём педагога."
+        },
+        "kids|street|some": {
+          title: "Детские танцы",
+          text: "Поддержим интерес к движению и ритму. Напишите, в какие дни удобно ходить."
+        },
+        "kids|soft|zero": {
+          title: "Детская группа в своём темпе",
+          text: "Подберём спокойный вход без гонки за результатом. Главное — чтобы ребёнку нравилось."
+        },
+        "kids|soft|some": {
+          title: "Детские танцы",
+          text: "Продолжим в комфортном темпе. Администратор подскажет актуальную группу."
+        }
+      };
+
+      function updateChooser() {
+        const key = filters.age + "|" + filters.goal + "|" + filters.level;
+        const result = recommendations[key] || recommendations["adult|heels|zero"];
+        document.getElementById("chooser-result").innerHTML =
+          "<strong>" + result.title + "</strong>" + result.text;
+      }
+
+      document.querySelectorAll(".chip").forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          const filter = chip.getAttribute("data-filter");
+          filters[filter] = chip.getAttribute("data-value");
+          document.querySelectorAll('.chip[data-filter="' + filter + '"]').forEach(function (el) {
+            el.classList.toggle("is-active", el === chip);
+          });
+          updateChooser();
+        });
+      });
+
+      function setMenuOpen(isOpen) {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+        mobileNav.classList.toggle("is-open", isOpen);
+        if (isOpen) mobileNav.removeAttribute("hidden");
+        else mobileNav.setAttribute("hidden", "");
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      mobileNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () { setMenuOpen(false); });
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") setMenuOpen(false);
+      });
+      window.addEventListener("scroll", function () {
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
+      }, { passive: true });
+
+      const revealItems = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
+        revealItems.forEach(function (item) { observer.observe(item); });
+      } else {
+        revealItems.forEach(function (item) { item.classList.add("is-visible"); });
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        formError.textContent = "";
+        formSuccess.classList.remove("is-visible");
+
+        const data = new FormData(form);
+        const name = String(data.get("name") || "").trim();
+        const phone = String(data.get("phone") || "").trim();
+        const direction = String(data.get("direction") || "").trim();
+        const comment = String(data.get("comment") || "").trim();
+
+        if (!name || !phone || !direction) {
+          formError.textContent = "Заполните имя, телефон и направление.";
+          return;
+        }
+        if (phone.replace(/\D/g, "").length < 10) {
+          formError.textContent = "Проверьте номер телефона — кажется, он слишком короткий.";
+          return;
+        }
+
+        const message = [
+          "Здравствуйте! Хочу записаться в ВАЙБС.",
+          "Имя: " + name,
+          "Телефон: " + phone,
+          "Направление: " + direction,
+          comment ? "Комментарий: " + comment : "",
+          "",
+          "Жду ответа, спасибо!"
+        ].filter(Boolean).join("\n");
+
+        formSuccess.classList.add("is-visible");
+        window.open("https://t.me/vibesmnd?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+      });
+
+      updateChooser();
+    })();
+  </script>
+</body>
+</html>
