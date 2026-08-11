@@ -1,8 +1,8 @@
-# ВАЙБС (Vibes) — Dance School Landing (Demo)
+# Vibes Dance School Landing
 
-Marketing landing page concept for a dance school in Perm: directions, schedule, pricing, teachers, reviews, and signup.
+Concept marketing page for a dance school: directions, teachers, schedule, pricing, reviews, and signup.
 
-> **Demo concept.** Not an official school website.
+Demo concept — not an official school website.
 
 ## Sections
 
@@ -14,11 +14,11 @@ Marketing landing page concept for a dance school in Perm: directions, schedule,
 
 ## Stack
 
-- HTML / CSS / JavaScript (`index.html`)
+- HTML / CSS / JavaScript
 
-## Local viewing
+## Run locally
 
-Open `index.html` in a browser or:
+Open `index.html`, or:
 
 ```bash
 npx serve .
